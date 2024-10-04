@@ -1,3 +1,9 @@
+:root {
+    --border: 2px solid rgb(8, 92, 52);
+    --padding: 1rem;
+}
+
+
 nav {
     background-color: steelblue;
     padding: 10px;
@@ -11,6 +17,9 @@ nav a {
 
 h1 {
     color: steelblue;
+    background-color: transparent;
+    padding: var(--padding);
+
 }
 
 img {
@@ -32,8 +41,8 @@ main {
 aside {
     width: 20rem;
     margin: 1rem;
-    border: 1px sold rgba(0, 0, 0, 0.2); /* 1 */
-    padding: 1rem;
+    border: var(--border);
+    padding: var(--padding);
     background-color: #eee;
     color: #333;
     text-align: center;
@@ -47,12 +56,15 @@ aside img {
 main img{
     width: 150px;
     height: auto;
+    border: var(--border);
+    border: var(--border);
 }
 
 p {padding: 0;}
 
 footer {
     margin-top: 15px;
-    border-top: 1px solid #000;
+    border-top: var(--border);
     text-align: center;
+    
 }
