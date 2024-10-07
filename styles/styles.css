@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --border: 2px solid rgb(8, 92, 52);
     --padding: 1rem;
@@ -40,11 +46,11 @@ main {
 
 aside {
     width: 20rem;
-    margin: 1rem;
+    /* margin: 1rem;
     border: var(--border);
     padding: var(--padding);
     background-color: #eee;
-    color: #333;
+    color: #333; */
     text-align: center;
 }
 
@@ -58,6 +64,8 @@ main img{
     height: auto;
     border: var(--border);
     border: var(--border);
+    /* my float */
+    float: right;
 }
 
 p {padding: 0;}
@@ -65,6 +73,24 @@ p {padding: 0;}
 footer {
     margin-top: 15px;
     border-top: var(--border);
-    text-align: center;
-    
+    text-align: center; 
+}
+
+/* Class Sectors */
+.box {
+    margin: 1rem;
+    border: 1px solid rgb(8, 92, 52);
+    padding: 1rem;
+    background-color: #eee ;
+    color: #333333;
+}
+
+/* aside h2 {
+    position: absolute;
+    top: 47px;
+    left: 150px;
+} */
+
+ul { 
+    width: 50rem;
 }
