@@ -1,0 +1,55 @@
+ :root {
+    --heading-background-color: #F5F5C0; 
+    --heading-text-color: #6E0E0A;
+    --primary-color: #F2BB05; 
+    --secondary-color: #124E78; 
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial', sans-serif; 
+}
+
+header {
+    background-color: var(--heading-background-color);
+}
+
+.logobox {
+    /* later */
+}
+
+.hero img {
+    display: block; 
+    width: 100%;
+    height: auto;
+}
+
+
+
+nav.sociallinks {
+    /* later */
+}
+
+/* article {
+    position: absolute;
+    width: 100%;
+    background-color: #6E0E0A;
+    color: #F5F5C0;
+    text-align: center;
+ }
+
+ h1 {
+    position: absolute;
+ }
+
+ 
+
+ article img {
+    float: right;
+ }
+ footer {
+
+ }
+ nav class socialliks {
+
+ } */ 
