@@ -1,102 +1,177 @@
 :root {
-    --heading-background-color: #F5F5C0;
-    --heading-text-color: #6E0E0A;
-    --primary-color: #F2BB05;
-    --secondary-color: #124E78;
+    /* Color Scheme */
+    --primary-color: #002950;   /* Dark Blue */
+    --secondary-color: #0482E9;  /* Light Blue */
+    --accent1-color: #dfdfdf;    /* Light Gray */
+    --accent2-color: #02B0C7;    /* Medium Blue */
+    --text-color: #061117;       /* Dark Grayish Blue */
 }
 
+/* General Styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Suravaram', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+    background-color: var(--accent1-color);
+    max-width: 1200px; /* Limit the width of the page */
+    margin: 0 auto;    /*Center the content */
 }
 
 header {
-    background-color: var(--heading-background-color);
-}
-
-.logo-box {
-    display: inline-block;
-    padding: 10px;
-}
-
-.logo-box img {
-    width: 150px;
-    height: auto;
-}
-
-.hero {
-    position: relative;
-    text-align: center;
-    color: white;
-}
-
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.hero h1 {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    color: var(--heading-text-color);
     background-color: var(--primary-color);
-    padding: 10px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--secondary-color);
 }
 
-
-article img.float-right {
-    float: right;
-    margin-left: 10px;
-    width: 200px;
-    height: auto;
+header img {
+    width: 100px; /* Adjust based on your logo size */
 }
 
-section {
-    padding: 20px;
-    background-color: #f0f0f9;
-    margin: 10px 0;
+nav a {
+    text-decoration: none; /* Remove underline from navigation links */
+    color: var(--accent1-color);
+    margin: 0 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 
-section h2 {
+nav a:hover {
     color: var(--secondary-color);
 }
 
-section p {
-    font-size: 1rem;
-    color: #333;
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
 }
 
-.my-work {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
+.hero img {
+    display: block; /* Make it a block element */
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    opacity: 0.7; /* Adjust opacity */
 }
 
-.my-work img {
-    width: 180px;
-    height: auto;
-    margin: 10px;
+.hero h1 {
+    position: absolute; /* Positioning for absolute placement */
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 38px;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: white;
+    padding: 6px;
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
+    text-shadow: 5px 6px 4px var(--primary-color);
 }
 
-nav.sociallinks {
+/* Article */
+.hero article {
+    position: absolute; /* Positioning for absolute placement */
+    bottom: 10px; /* Adjust position from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    padding: 10px 0;
+    align-items: center;
+    width: 800px;
+    padding: 1px;
+    background-color: rgba(9, 41, 129, 0.438); /* Light background for readability */
+    border-radius: 5px; /* Rounded corners */
 }
 
-nav.sociallinks a {
+.hero article h2 {
+    font-size: 13px;
+    color: #e7ebec;
+    padding: 10px;
+    line-height: 1rem;
+    position: relative;
+    left: 2px;
+    top: -30px;
+    
+}
+.hero article img {
+    width: 150px; /* Adjust size as needed */
+    margin-right: 20px;
+}
+
+.hero article p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--accent1-color);
+    max-width: 600px;
+}
+
+/* Section */
+section {
+    padding: 50px 10%;
+    background-color: var(--accent1-color);
+}
+
+section h2 {
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 36px;
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    text-decoration: none; /* Ensure no underline */
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Adventure Section */
+section img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+section img:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--accent1-color);
+}
+
+footer nav {
+    margin: 20px 0;
+}
+
+footer nav a {
     margin: 0 10px;
 }
 
-nav.sociallinks img {
+footer nav a img {
     width: 30px;
-    height: auto;
-    text-decoration: none;
+    height: 30px;
+    margin: 0 10px;
+    text-decoration: none; /* Remove underline from social media links */
 }
 
-.hero article {
-    background-color: rgba(242, 187, 5, 0.9);
+footer p {
+    font-size: 16px;
+    color: var(--accent1-color);
 }
+/* end */
