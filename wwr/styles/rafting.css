@@ -8,7 +8,339 @@
 }
 
 /* General Styles */
+body {:root {
+    /* Color Scheme */
+    --primary-color: #061d33;   /* Dark Blue */
+    --secondary-color: #3781BE;  /* Light Blue */
+    --accent1-color: #e7ebec;    /* Light Gray */
+    --accent2-color: #2D649F;    /* Medium Blue */
+    --text-color: #18435A;       /* Dark Grayish Blue */
+}
+
+
+/* Updated CSS with Google Fonts */
 body {
+    font-family: 'Merriweather', serif;
+  }
+  
+  /* For labels, input, buttons, etc., you can use Roboto */
+  label, input, button, select, textarea {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+/* General Styles */
+body {
+    font-family: 'Suravaram', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+    background-color: var(--accent1-color);
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
+}
+
+/* Header Styles */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Grid layout with two columns */
+    align-items: center;
+    padding: 10px;
+    background-color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+header img {
+    width: 100px; 
+    
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end; /* Align navigation to the right */
+    gap: 20px; /* Spacing between links */
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--accent1-color);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 10px 20px;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 38px;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: white;
+    padding: 6px;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-shadow: 5px 6px 4px var(--primary-color);
+}
+
+.hero article {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    padding: 1px;
+    background-color: rgba(9, 41, 129, 0.438);
+    border-radius: 5px;
+     bottom: 80px; /* Reduced from 10px to move it upwards */
+}
+
+.hero article img {
+    width: 120px;
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+}
+
+.hero article p {
+    font-size: 18px;
+    color: var(--accent1-color);
+    max-width: 700px;
+    text-align: left;
+    padding-left: 20px;
+    z-index: 1; /* Add this line */
+    margin-right: 170px; /* Add this line, adjust according to image width */
+  
+}
+
+/* History Section */
+.history-section {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: white;
+}
+
+.history-title {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 36px;
+    color: var(--secondary-color);
+}
+
+.history-section img {
+    width: 250px;
+    margin: 0 20px;
+}
+
+.history-section p {
+    flex: 1;
+    font-size: 18px;
+    color: var(--text-color);
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Adventure Section */
+.adventure-section {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Grid layout for 5 images */
+    gap: 10px;
+    padding: 40px 1%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.adventure-section h2 {
+    text-align: center;
+    font-size: 36px;
+    color: var(--secondary-color);
+    margin: 10px;
+    position: absolute;
+    top: -10px; /* Adjusted positioning for h2 */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.adventure-section figure {
+    text-align: center;
+}
+
+.adventure-section img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.adventure-section img:hover {
+    transform: scale(1.05);
+}
+
+.adventure-section figcaption {
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+/* Footer Section */
+footer {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--accent1-color);
+    position: relative;  /* To enable positioning of the nav inside */
+}
+
+footer nav {
+    display: flex;
+    justify-content: flex-end; /* Align icons to the right */
+    gap: 2.5px;
+    position: absolute;
+    right: 5%; /* Adjust this value to align with your content */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically in the footer */
+}
+
+footer nav a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+footer nav a img:hover {
+    transform: scale(1.3);
+}
+
+
+/* Contact Information Section */
+.contact-info {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--accent1-color);
+}
+
+/* Employee Profiles Section */
+.employee-profiles {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    color: #fff;
+    background-color: var(--accent2-color);
+}
+
+.employee-profiles .profile {
+    text-align: center;
+}
+
+.employee-profiles img {
+    width: 120px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Contact Form */
+.contact-form {
+    padding: 20px;
+    background-color: var(--accent1-color);
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.contact-form form {
+    display: grid;
+    gap: 1rem;
+}
+
+.contact-form label,
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea,
+.contact-form button {
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.contact-form textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Button Styling */
+.contact-form button {
+    padding: 0.75rem;
+    background-color: rgb(2, 56, 138);
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contact-form button:hover {
+    background-color: darkgreen;
+}
+
+
+footer nav a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+footer nav a img:hover {
+    transform: scale(1.3);
+}
+
+/* Footer Wireframe Link Styling */
+.footer-wireframe-link {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    margin-right: 10px; /* Optional spacing adjustment */
+}
+
+.footer-wireframe-link:hover {
+    color: var(--secondary-color); /* Light blue hover effect */
+}
+
+
+/* Google Map Styling */
+.google-map {
+    border: 0;
+    width: 100%;
+    height: 300px; /* Ensure height is specified in CSS */
+}
+
     font-family: 'Suravaram', serif;
     margin: 0;
     padding: 0;
